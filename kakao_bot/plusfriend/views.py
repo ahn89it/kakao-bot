@@ -1,10 +1,6 @@
 from .decorators import bot
 
 @bot
-def on_init(request):
-    return {'type':'text'}
-
-@bot
 def on_message(request):
     user_key = request.JSON['user_key']   #각 user를 식별할 수 있는 key
     type = request.JSON['type']           # type이 사진인지 글인지 구별 
@@ -17,6 +13,10 @@ def on_message(request):
             'text' : response,
         }
     }
+
+@bot
+def on_init(request):
+    return {'type':'text'}
 
 @bot 
 def on_added(request):

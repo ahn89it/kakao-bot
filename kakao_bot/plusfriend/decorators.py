@@ -1,6 +1,7 @@
 from functools import wraps
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 def bot(views_fn):
     @wraps(views_fn)
