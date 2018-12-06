@@ -11,4 +11,6 @@ urlpatterns = [
     re_path(r'friend/(?P<user_key>[\w-]+)$', views.on_block),
     re_path(r'chat_room/(?P<user_key>[\w-]+)$', views.on_leave),
     path('message', views.on_message),    
+    re_path(r'diary/(?P<user_key>[a-zA-Z\d_-]+)$', views.post_list, name='post_list'),  
+
 ]
