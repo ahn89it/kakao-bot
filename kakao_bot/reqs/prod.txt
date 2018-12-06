@@ -2,3 +2,6 @@
 
 uwsgi
 mysqlclient
+
+django-storages
+azure-storages==0.20.0
